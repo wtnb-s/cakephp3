@@ -11,3 +11,6 @@ RUN set -x && \
   deluser www-data && \
   addgroup -g 50 -S www-data && \
   adduser -u 1000 -D -S -G www-data www-data 
+RUN apk add autoconf build-base
+RUN pecl install xdebug
+RUN docker-php-ext-enable xdebug

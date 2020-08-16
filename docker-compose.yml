@@ -32,6 +32,7 @@ services:
       TZ: "Asia/Tokyo"
     volumes:
       - "./data/htdocs:/var/www/html"
+      - ./data/phpfpm/php.ini:/usr/local/etc/php/php.ini
     depends_on:
       - mysql
   host:
