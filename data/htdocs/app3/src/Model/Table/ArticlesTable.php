@@ -24,8 +24,8 @@ class ArticlesTable extends Table {
     }
 
     public function beforeSave($event, $entity, $options) {
-        if ($entity->tag_string) {
-            $entity->tags = $this->_buildTags($entity->tag_string);
+        if ($entity['tag_string']) {
+            $entity['tags'] = $this->_buildTags($entity['tag_string']);
         }
         // 他のコード
     }
